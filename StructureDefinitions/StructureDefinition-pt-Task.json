@@ -96,52 +96,19 @@
           "ordered": false,
           "rules": "open"
         },
-        "short": "Reference to ActivityDefinition",
-        "definition": "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task.",
-        "alias": [
-          "DigitaleActiviteit",
-          "user content"
-        ],
         "min": 1
-      },
-      {
-        "id": "Task.extension.extension",
-        "path": "Task.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Task.extension.value[x]",
-        "path": "Task.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Task.extension.value[x]:valueReference",
-        "path": "Task.extension.value[x]",
-        "sliceName": "valueReference",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://medmij.nl/fhir/StructureDefinition/pt-DigitalActivity"
-            ]
-          }
-        ]
       },
       {
         "id": "Task.extension:digitalActivity",
         "path": "Task.extension",
         "sliceName": "digitalActivity",
+        "short": "Reference to ActivityDefinition",
+        "definition": "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task.",
+        "comment": "FHIR R4 offers `Task.instantiatesCanonical` for this link, but that element holds a canonical (a URL of a definition) rather than a literal reference to an ActivityDefinition instance, which means the reference cannot be used as the basis for chained search. This extension holds a literal `Reference(pt-DigitalActivity)` instead, which the custom SearchParameter `digital-activity` targets so that Tasks can be searched by their digital activity and retrieved together with it using `_include`. The same approach is taken by the `instantiates` extension on the Koppeltaal KT2Task profile (http://koppeltaal.nl/fhir/StructureDefinition/KT2Task). `Task.instantiatesCanonical` is not used in Provider Tasks: receivers of a Task can ignore any value in it and should look for the digital activity in this extension.",
+        "alias": [
+          "DigitaleActiviteit",
+          "user content"
+        ],
         "min": 1,
         "max": "1",
         "type": [

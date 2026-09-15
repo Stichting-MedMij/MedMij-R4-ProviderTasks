@@ -23,9 +23,10 @@ Description: "Patient-specific task that tells a patient what to do as part of a
   * ^alias = "Taak"
   * ^definition = "Patient-specific task that tells a patient what to do as part of a digital care activity. A Task is shown in the patient's task list and supports tracking progress and completion over time."
 * extension contains ExtTaskDigitalActivity named digitalActivity 1..1
-  * ^short = "Reference to ActivityDefinition"
+* extension[digitalActivity] ^short = "Reference to ActivityDefinition"
   * ^definition = "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task."
   * ^alias = "DigitaleActiviteit"
+  * ^comment = "FHIR R4 offers `Task.instantiatesCanonical` for this link, but that element holds a canonical (a URL of a definition) rather than a literal reference to an ActivityDefinition instance, which means the reference cannot be used as the basis for chained search. This extension holds a literal `Reference(pt-DigitalActivity)` instead, which the custom SearchParameter `digital-activity` targets so that Tasks can be searched by their digital activity and retrieved together with it using `_include`. The same approach is taken by the `instantiates` extension on the Koppeltaal KT2Task profile (http://koppeltaal.nl/fhir/StructureDefinition/KT2Task). `Task.instantiatesCanonical` is not used in Provider Tasks: receivers of a Task can ignore any value in it and should look for the digital activity in this extension."
   * valueReference only Reference(PtDigitalActivity)
 * identifier 1..
   * ^short = "Identifier"
