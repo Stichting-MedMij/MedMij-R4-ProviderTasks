@@ -23,7 +23,11 @@ Description: "Patient-specific digital group plan that groups related tasks belo
   * text 1..1
     * ^short = "Display name of the digital group plan"
     * ^definition = "Human-readable name of the digital group plan."
-    * ^comment = "This name is used as the display label of the Task group in the PHR. The display on Task.basedOn.reference SHALL match this value. The source system fills this element with the (display) name of the digital group plan when a healthcare professional starts a digital group plan/module for a patient."
+    * ^comment = """
+      This name is used as the display label of the Task group in the PHR. Every `pt-Task` that is part of this group plan SHALL carry the same label in `Task.basedOn.display`.
+
+      The source system fills this element with the (display) name of the digital group plan when a healthcare professional starts a digital group plan/module for a patient.
+      """
     * ^alias = "Naam digitaal groepsplan"
 * subject only Reference(Patient or Group or Location or Device or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
   * ^definition = "The patient for whom the activity is requested."
