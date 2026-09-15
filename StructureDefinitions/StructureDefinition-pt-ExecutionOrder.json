@@ -50,6 +50,15 @@
           "referral request",
           "transfer of care request"
         ],
+        "constraint": [
+          {
+            "key": "pt-ExecutionOrder-01",
+            "severity": "error",
+            "human": "An execution order SHALL contain patient-specific scheduling (occurrence[x]) and/or patient-specific instructions (patientInstruction). An execution order is only created when at least one of the two deviates from or adds to the generic activity information.",
+            "expression": "occurrence.exists() or patientInstruction.exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/pt-ExecutionOrder"
+          }
+        ],
         "mapping": [
           {
             "identity": "pt-dataset-100-alpha1-20260511",
