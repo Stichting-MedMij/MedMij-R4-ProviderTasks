@@ -10,7 +10,7 @@ Description: "Patient-specific task that tells a patient what to do as part of a
 * insert Copyright
 // Tasks in scope for this data service carry a fixed tag, which is also the
 // search parameter (`_tag`) the PHR filters on. Slicing is open: other tags are allowed.
-* meta.tag ^slicing.discriminator[0].type = #pattern
+* meta.tag ^slicing.discriminator[0].type = #value
 * meta.tag ^slicing.discriminator[0].path = "$this"
 * meta.tag ^slicing.rules = #open
 * meta.tag contains dataService 1..1
