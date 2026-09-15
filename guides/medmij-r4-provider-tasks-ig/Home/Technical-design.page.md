@@ -87,7 +87,7 @@ A `pt-Task` is one unit of work for one patient. Multiple Tasks may reference th
 | --- | --- | --- |
 | `Task.basedOn` | `pt-DigitalGroupPlan` (ServiceRequest) | Groups the Tasks of one digital care module; group label in `ServiceRequest.code.text` |
 | `Task.focus` | `pt-ExecutionOrder` (ServiceRequest, optional) | Patient-specific scheduling (`occurrence[x]`) and `patientInstruction` |
-| `ext-Task.DigitalActivity` extension | `pt-DigitalActivity` (ActivityDefinition) | Generic activity definition; references `pt-Endpoint` when the activity is launchable |
+| `ext-Task.DigitalActivity` extension | `pt-DigitalActivity` (ActivityDefinition) | Generic activity definition; always references at least one `pt-Endpoint` at which the activity is launched |
 
 **Table 3: References from `pt-Task`**
 
