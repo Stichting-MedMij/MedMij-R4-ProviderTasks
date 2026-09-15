@@ -8,6 +8,7 @@ Description: "Patient-specific execution order for a digital activity, created b
 * insert PublisherAndContact
 * ^purpose = "This ServiceRequest resource represents the ExecutionOrder building block for patient use cases in the context of the data service Provider Tasks (Aanbiedertaken)."
 * insert Copyright
+* obeys pt-ExecutionOrder-01
 * .
   * ^short = "Execution order"
   * ^alias = "Uitvoeringsopdracht"
@@ -40,6 +41,11 @@ Description: "Patient-specific execution order for a digital activity, created b
   * ^short = "Patient-specific instructions"
   * ^definition = "Patient-oriented instructions that may differ from or add to the generic activity information (e.g., fasting measurements, preferred timing, preparation steps). These instructions should be shown alongside the task(s) created from this order."
   * ^alias = "PatiëntenInstructie"
+
+Invariant: pt-ExecutionOrder-01
+Description: "An execution order SHALL contain patient-specific scheduling (occurrence[x]) and/or patient-specific instructions (patientInstruction). An execution order is only created when at least one of the two deviates from or adds to the generic activity information."
+Severity: #error
+Expression: "occurrence.exists() or patientInstruction.exists()"
 
 Mapping: ProviderTasksExecutionOrderMedMij-100-alpha1
 Source: PtExecutionOrder
