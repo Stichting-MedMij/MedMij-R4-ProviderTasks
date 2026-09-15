@@ -78,18 +78,15 @@ Description: "Patient-specific task that tells a patient what to do as part of a
   * ^definition = "The healthcare professional who requested or initiated this Task."
   * ^alias = "Aanvrager"
 * owner 1..
-* owner only Reference(Practitioner or PractitionerRole or Organization or CareTeam or HealthcareService or Patient or Device or RelatedPerson or http://nictiz.nl/fhir/StructureDefinition/nl-core-CareTeam or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson)
+* owner only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient or Patient or Practitioner or PractitionerRole or Organization or CareTeam or HealthcareService or Device or RelatedPerson)
   * ^short = "Owner"
   * ^definition = "The party currently responsible for executing the task."
   * ^alias = "Eigenaar"
   * ^comment = """
-    In Provider Tasks, the owner is typically the performer of the task (usually the patient), but execution may also be delegated to another responsible party such as a caregiver/contact person or a care team.
+    In Provider Tasks, the owner is typically the performer of the task (usually the patient), but execution may also be delegated to another responsible party, such as a caregiver, contact person, or care team.
 
-    Each occurrence of the zib HealthProfessional is normally represented by two FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.
-
-    In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.
+    In this version of Provider Tasks, however, only activities that the patient performs themselves are in scope. The owner is therefore always the patient, and is the same patient as in `Task.for`. Delegating execution to another party (for example a contact person or a care team) is not yet supported. Support for other owners may be added in a future version, together with the actor semantics that go with it.
     """
-
 Mapping: ProviderTasksTaskMedMij-100-alpha1
 Source: PtTask
 Id: pt-dataset-100-alpha1-20260511
