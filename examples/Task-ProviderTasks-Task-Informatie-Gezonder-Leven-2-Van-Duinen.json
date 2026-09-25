@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderTasks-Task-Glucosemeting-13-Van-Duinen",
+  "id": "ProviderTasks-Task-Informatie-Gezonder-Leven-2-Van-Duinen",
   "meta": {
     "tag": [
       {
@@ -20,7 +20,7 @@
     {
       "url": "http://medmij.nl/fhir/StructureDefinition/ext-Task.DigitalActivity",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen",
+        "reference": "ActivityDefinition/ProviderTasks-ActivityDefinition-Gezonder-Leven-Van-Duinen",
         "type": "ActivityDefinition"
       }
     }
@@ -28,7 +28,7 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-Glucose-13"
+      "value": "TASK-Informatie-Gezonderleven-6789"
     }
   ],
   "basedOn": [
@@ -37,23 +37,20 @@
       "display": "Digitale zorgmodule Diabetes"
     }
   ],
-  "status": "accepted",
+  "status": "requested",
   "intent": "order",
   "priority": "routine",
-  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.",
-  "focus": {
-    "reference": "ServiceRequest/ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen"
-  },
+  "description": "Lees tips voor een gezonder leven: voeding, bewegen en volhouden [2]",
   "for": {
     "reference": "Patient/ProviderTasks-Patient-Van-Duinen",
     "display": "Tom van Duinen"
   },
   "executionPeriod": {
-    "start": "2025-12-28T08:00:00+01:00",
-    "end": "2025-12-28T23:59:00+01:00"
+    "start": "2025-12-22",
+    "end": "2025-12-28"
   },
-  "authoredOn": "2025-12-19T11:20:00+01:00",
-  "lastModified": "2025-12-22T07:03:00+01:00",
+  "authoredOn": "2025-12-20T09:15:00+01:00",
+  "lastModified": "2025-12-24T08:40:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderTasks-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"

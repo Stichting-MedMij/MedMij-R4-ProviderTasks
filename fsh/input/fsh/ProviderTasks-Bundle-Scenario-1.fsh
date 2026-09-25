@@ -107,7 +107,7 @@ Usage: #example
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-22T08:00:00+01:00"
+  * start = "2025-12-22T18:00:00+01:00"
   * end = "2025-12-22T23:59:00+01:00"
 * authoredOn = "2025-12-19T11:20:00+01:00"
 * lastModified = "2025-12-22T18:12:00+01:00"
@@ -181,7 +181,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-5"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #failed
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -208,7 +208,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-6"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #rejected
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -235,7 +235,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-7"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #requested
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -289,7 +289,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-9"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #ready
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -316,7 +316,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-10"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -343,7 +343,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-11"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -370,7 +370,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-12"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -397,7 +397,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-13"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #accepted
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -424,7 +424,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-14"
 * basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #on-hold
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
@@ -432,6 +432,60 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-28T18:00:00+01:00"
   * end = "2025-12-28T23:59:00+01:00"
+* authoredOn = "2025-12-19T11:20:00+01:00"
+* lastModified = "2025-12-22T07:03:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Glucosemeting-15-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+* insert DefaultNarrativeInstance
+* extension
+  * url = $pt-digital-activity
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Glucose-15"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #draft
+* intent = #order
+* priority = #routine
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-29T08:00:00+01:00"
+  * end = "2025-12-29T23:59:00+01:00"
+* authoredOn = "2025-12-19T11:20:00+01:00"
+* lastModified = "2025-12-22T07:03:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Glucosemeting-16-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+* insert DefaultNarrativeInstance
+* extension
+  * url = $pt-digital-activity
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Glucose-16"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #entered-in-error
+* intent = #order
+* priority = #routine
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-29T18:00:00+01:00"
+  * end = "2025-12-29T23:59:00+01:00"
 * authoredOn = "2025-12-19T11:20:00+01:00"
 * lastModified = "2025-12-22T07:03:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
@@ -500,7 +554,7 @@ Usage: #example
 * publisher = "HinqZNO"
 * description = "Leestips voor een gezondere leefstijl."
 
-Instance: ProviderTasks-Task-Informatie-Gezonder-Leven-Van-Duinen
+Instance: ProviderTasks-Task-Informatie-Gezonder-Leven-1-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
@@ -516,7 +570,33 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden"
+* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden [1]"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-22"
+  * end = "2025-12-28"
+* authoredOn = "2025-12-20T09:15:00+01:00"
+* lastModified = "2025-12-24T08:40:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Informatie-Gezonder-Leven-2-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+* insert DefaultNarrativeInstance
+* extension
+  * url = $pt-digital-activity
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Gezonder-Leven-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Informatie-Gezonderleven-6789"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #requested
+* intent = #order
+* priority = #routine
+* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden [2]"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
