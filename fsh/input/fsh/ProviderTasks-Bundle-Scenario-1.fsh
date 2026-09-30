@@ -76,7 +76,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -103,7 +103,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -130,7 +130,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -157,7 +157,7 @@ Usage: #example
 * status = #cancelled
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [cancelled]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -184,7 +184,7 @@ Usage: #example
 * status = #failed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -211,7 +211,7 @@ Usage: #example
 * status = #rejected
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [rejected]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -238,7 +238,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [requested]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -265,7 +265,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [received]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -292,7 +292,7 @@ Usage: #example
 * status = #ready
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [ready]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -319,7 +319,7 @@ Usage: #example
 * status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -346,7 +346,7 @@ Usage: #example
 * status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -373,7 +373,7 @@ Usage: #example
 * status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -400,7 +400,7 @@ Usage: #example
 * status = #accepted
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [accepted]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -427,7 +427,7 @@ Usage: #example
 * status = #on-hold
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [on-hold]"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28T18:00:00+01:00"
@@ -453,7 +453,7 @@ Usage: #example
 * status = #draft
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [draft]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -480,7 +480,7 @@ Usage: #example
 * status = #entered-in-error
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [entered-in-error]"
 * focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
