@@ -40,7 +40,7 @@
   "status": "accepted",
   "intent": "order",
   "priority": "routine",
-  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.",
+  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [accepted]",
   "focus": {
     "reference": "ServiceRequest/ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen"
   },

@@ -40,7 +40,7 @@
   "status": "failed",
   "intent": "order",
   "priority": "routine",
-  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.",
+  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed]",
   "focus": {
     "reference": "ServiceRequest/ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen"
   },
