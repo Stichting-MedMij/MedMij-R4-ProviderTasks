@@ -34,5 +34,5 @@
       ]
     }
   ],
-  "address": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
+  "address": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch"
 }

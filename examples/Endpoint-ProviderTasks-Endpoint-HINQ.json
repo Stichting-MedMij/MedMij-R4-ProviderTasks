@@ -34,5 +34,5 @@
       ]
     }
   ],
-  "address": "https://module.test.5im.nl/web/api/smartonfhir/launch"
+  "address": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch"
 }
