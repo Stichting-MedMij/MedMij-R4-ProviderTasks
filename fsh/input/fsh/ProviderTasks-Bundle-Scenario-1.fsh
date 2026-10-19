@@ -83,7 +83,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -111,7 +111,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -139,7 +139,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -167,7 +167,7 @@ Usage: #example
 * status = #cancelled
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [cancelled]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -195,7 +195,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -220,10 +220,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-6"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #rejected
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [rejected]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -248,10 +248,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-7"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #requested
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [requested]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -279,7 +279,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [received]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -304,10 +304,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-9"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #ready
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [ready]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -332,10 +332,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-10"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -360,10 +360,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-11"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -388,10 +388,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-12"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -416,10 +416,10 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-13"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #accepted
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [accepted]"
 * focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -444,16 +444,72 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-14"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #on-hold
 * intent = #order
 * priority = #routine
-* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel."
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [on-hold]"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28T18:00:00+01:00"
   * end = "2025-12-28T23:59:00+01:00"
 * authoredOn = "2025-12-22T08:00:00+01:00"
 * lastModified = "2025-12-22T08:00:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Glucosemeting-15-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* text
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Glucose-15"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #draft
+* intent = #order
+* priority = #routine
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [draft]"
+* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-29T08:00:00+01:00"
+  * end = "2025-12-29T23:59:00+01:00"
+* authoredOn = "2025-12-19T11:20:00+01:00"
+* lastModified = "2025-12-22T07:03:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Glucosemeting-16-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* text
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Glucose-16"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #entered-in-error
+* intent = #order
+* priority = #routine
+* description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [entered-in-error]"
+* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-29T18:00:00+01:00"
+  * end = "2025-12-29T23:59:00+01:00"
+* authoredOn = "2025-12-19T11:20:00+01:00"
+* lastModified = "2025-12-22T07:03:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
