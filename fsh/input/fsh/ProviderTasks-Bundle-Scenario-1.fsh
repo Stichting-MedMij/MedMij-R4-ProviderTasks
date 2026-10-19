@@ -448,6 +448,7 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [on-hold]"
+* focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28T18:00:00+01:00"
