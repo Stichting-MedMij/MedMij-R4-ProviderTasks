@@ -457,7 +457,7 @@ Usage: #example
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderTasks-Task-Glucosemeting-15-Van-Duinen
+Instance: ProviderTasks-Task-Meetopdracht-Glucosemeting-15
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
@@ -485,7 +485,7 @@ Usage: #example
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderTasks-Task-Glucosemeting-16-Van-Duinen
+Instance: ProviderTasks-Task-Meetopdracht-Glucosemeting-16
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
