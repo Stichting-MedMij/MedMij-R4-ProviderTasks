@@ -465,17 +465,17 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-15"
-* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
 * status = #draft
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [draft]"
-* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-29T08:00:00+01:00"
@@ -493,17 +493,17 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderTasks-ActivityDefinition-Glucosemeting-Van-Duinen)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-16"
-* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
 * status = #entered-in-error
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [entered-in-error]"
-* focus = Reference(ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen)
+* focus = Reference(ProviderTasks-ServiceRequestExecution-Glucosemeting)
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-29T18:00:00+01:00"
