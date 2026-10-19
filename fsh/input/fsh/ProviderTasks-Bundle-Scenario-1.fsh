@@ -581,7 +581,7 @@ Usage: #example
 * publisher = "HinqZNO"
 * description = "Leestips voor een gezondere leefstijl."
 
-Instance: ProviderTasks-Task-Informatie-Gezonder-Leven
+Instance: ProviderTasks-Task-Informatie-Gezonder-Leven-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
@@ -598,7 +598,34 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden"
+* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden [1]"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-22"
+  * end = "2025-12-28"
+* authoredOn = "2025-12-24T07:00:00+01:00"
+* lastModified = "2025-12-24T07:00:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderTasks-Task-Informatie-Gezonder-Leven-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* text
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Informatie-Gezonder-Leven)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Informatie-Gezonderleven-6789"
+* basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
+* status = #requested
+* intent = #order
+* priority = #routine
+* description = "Lees tips voor een gezonder leven: voeding, bewegen en volhouden [2]"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
