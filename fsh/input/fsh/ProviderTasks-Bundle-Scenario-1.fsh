@@ -192,7 +192,7 @@ Usage: #example
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-Glucose-5"
 * basedOn = Reference(ProviderTasks-ServiceRequestDigitalGroup-Diabetes) "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #failed
 * intent = #order
 * priority = #routine
 * description = "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed]"
