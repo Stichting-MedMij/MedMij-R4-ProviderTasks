@@ -12,27 +12,17 @@ Two information tasks. The patient is not required to launch the module on a spe
 
 | Identifier | ActivityDefinition | Description | Status | LastModified |
 | --- | --- | --- | --- | --- |
-| TASK-Informatie-diabetes-12345 | Wat is diabetes type 2? | Lees wat diabetes type 2 is en wat je zelf kunt doen | received | 23-12-2025 07:00 |
 | TASK-Informatie-Gezonderleven-6789 | Gezonder gaan leven | Lees tips voor een gezonder leven: voeding, bewegen en volhouden | requested | 24-12-2025 07:00 |
 | TASK-Informatie-Gezonderleven-6789 | Gezonder gaan leven | Lees tips voor een gezonder leven: voeding, bewegen en volhouden [1] | requested | 24-12-2025 07:00 |
 
 ### Measurement tasks (Bloedglucosemeting)
 
-Fourteen blood-glucose measurement tasks, 2 per day during 7 consecutive days (22-12-2025 t/m 29-12-2025). All 16 tasks share the following properties:
-
-| | |
-| --- | --- |
-| ActivityDefinition | Bloedglucose meting volgens NHG protocol |
-| BasedOn (digital group plan) | Digitale zorgmodule Diabetes |
-| Focus (execution order) | Uitvoeringsopdracht Bloedglucosemeting |
-| AuthoredOn / LastModified | 22-12-2025 08:00 |
-
-The execution date, status and description per task are:
+Sixteen blood-glucose measurement tasks, 2 per day during 8 consecutive days (22-12-2025 t/m 29-12-2025).
 
 | Identifier | ExecutionPeriod | Status | Description |
 | --- | --- | --- | --- |
 | TASK-Glucose-1 | 22-12-2025 (1st measurement) | completed | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] |
-| TASK-Glucose-2 | 22-12-2025 (2nd measurement) | completed | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.[completed] |
+| TASK-Glucose-2 | 22-12-2025 (2nd measurement) | completed | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] |
 | TASK-Glucose-3 | 23-12-2025 (1st measurement) | completed | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] |
 | TASK-Glucose-4 | 23-12-2025 (2nd measurement) | cancelled | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [cancelled] |
 | TASK-Glucose-5 | 24-12-2025 (1st measurement) | failed | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed] |
@@ -40,7 +30,7 @@ The execution date, status and description per task are:
 | TASK-Glucose-7 | 25-12-2025 (1st measurement) | requested | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [requested] |
 | TASK-Glucose-8 | 25-12-2025 (2nd measurement) | received | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [received] |
 | TASK-Glucose-9 | 26-12-2025 (1st measurement) | ready | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [ready] |
-| TASK-Glucose-10 | 26-12-2025 (2nd measurement) | in-progress| Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] | 
+| TASK-Glucose-10 | 26-12-2025 (2nd measurement) | in-progress | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] | 
 | TASK-Glucose-11 | 27-12-2025 (1st measurement) | in-progress | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] |
 | TASK-Glucose-12 | 27-12-2025 (2nd measurement) | in-progress | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] |
 | TASK-Glucose-13 | 28-12-2025 (1st measurement) | accepted | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [accepted] |
