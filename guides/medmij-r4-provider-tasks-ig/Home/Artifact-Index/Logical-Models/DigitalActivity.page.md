@@ -1,17 +1,11 @@
 ---
 topic: ptlmDigitalActivity
+canonical: http://medmij.nl/fhir/StructureDefinition/pt-lm-DigitalActivity
+expand: yes
 ---
 
-# Digital activity
+## Digital activity
 
-<tabs>
-    <tab title="Tree view" active="true">
-      {{tree:http://medmij.nl/fhir/StructureDefinition/pt-lm-DigitalActivity, buttons}}
-    </tab>
-    <tab title="Xml">
-      {{xml:http://medmij.nl/fhir/StructureDefinition/pt-lm-DigitalActivity}}
-    </tab>
-    <tab title="Json">
-      {{json:http://medmij.nl/fhir/StructureDefinition/pt-lm-DigitalActivity}}
-    </tab>
-</tabs>
+{{page:fql-get-resource-description}}
+
+{{page:resource-lm-view-tree}}

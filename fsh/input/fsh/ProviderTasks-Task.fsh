@@ -6,29 +6,41 @@ Description: "Patient-specific task that tells a patient what to do as part of a
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This Task resource represents the Task building block for patient use cases in the context of the information standard Provider Tasks (Aanbiedertaken)."
+* ^purpose = "This Task resource represents the Task building block for patient use cases in the context of the data service Provider Tasks (Aanbiedertaken)."
 * insert Copyright
-* .
+// Tasks in scope for this data service carry a fixed tag, which is also the
+// search parameter (`_tag`) the PHR filters on. Slicing is open: other tags are allowed.
+* meta.tag ^slicing.discriminator[0].type = #pattern
+* meta.tag ^slicing.discriminator[0].path = "$this"
+* meta.tag ^slicing.rules = #open
+* meta.tag contains dataService 1..1
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+  * ^short = "Data service tag"
+  * ^definition = "Marks this Task as being in scope for the Provider Tasks (Aanbiedertaken) data service, so it can be distinguished from Tasks used in other contexts."
+  * ^comment = "A tag is used because R4 offers no better place to categorize a Task. `Task.code` is not suitable: it states what kind of work is to be performed (e.g. a blood pressure measurement or a saturation measurement), not which data service the Task belongs to. Unlike most other resources, Task has no `category` element; this gap has been raised with HL7 in [FHIR-57849](https://jira.hl7.org/browse/FHIR-57849)."
+* . // root element
   * ^short = "Task"
   * ^alias = "Taak"
-* .
-^definition = "Patient-specific task that tells a patient what to do as part of a digital care activity. A Task is shown in the patient's task list and supports tracking progress and completion over time."
-* extension contains ExtDigitalActivity named digitalActivity 1..1
+  * ^definition = "Patient-specific task that tells a patient what to do as part of a digital care activity. A Task is shown in the patient's task list and supports tracking progress and completion over time."
+* extension contains ExtTaskDigitalActivity named digitalActivity 1..1
   * ^short = "Reference to ActivityDefinition"
   * ^definition = "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task."
   * ^alias = "DigitaleActiviteit"
   * valueReference only Reference(PtDigitalActivity)
 * identifier 1..
-  * ^comment = "Mapping to the functional model is pending: a corresponding identifier concept is to be added to the Task Logical Model."
+  * ^short = "Identifier"
+  * ^definition = "Business identifier for this patient task."
+  * ^alias = "Identificatie"
 * basedOn 1..1
 * basedOn only Reference(PtDigitalGroupPlan)
   * ^short = "Digital group plan"
   * ^definition = "Reference to the ServiceRequest that initiates the digital group plan for the patient. This is the module-level order and links the Task to the requested digital group plan."
   * ^alias = "DigitaalGroepsplan"
-* status 1..1
+* status
   * ^short = "Status"
-  * ^definition = "Current state of the Task in the workflow (e.g., requested, received, accepted, in-progress, completed, cancelled)."
   * ^alias = "Status"
+* intent
+  * ^comment = "Within the Provider Tasks data service all Tasks are expected to have an intent of _order_."
 * priority
   * ^short = "Priority"
   * ^definition = "Indicates how urgent it is to perform the activity (e.g., routine, urgent, asap)."
@@ -40,7 +52,14 @@ Description: "Patient-specific task that tells a patient what to do as part of a
   * ^short = "ExecutionPeriod"
   * ^definition = "Time window in which the task should be performed (start/end), if applicable."
   * ^alias = "Periode"
-* focus 0..1
+* authoredOn
+  * ^short = "AuthoredOn"
+  * ^definition = "The date and time this task was created."
+  * ^alias = "CreatieDatumTijd"
+* lastModified
+  * ^short = "LastModified"
+  * ^definition = "The date and time of last modification to this task."
+  * ^alias = "MutatieDatumTijd"
 * focus only Reference(PtExecutionOrder)
   * ^short = "Patient-specific execution details"
   * ^definition = "Reference to the ServiceRequest that contains patient-specific scheduling and/or instructions that deviate from or complement the generic ActivityDefinition guidance."
@@ -62,7 +81,7 @@ Description: "Patient-specific task that tells a patient what to do as part of a
 * owner only Reference(Practitioner or PractitionerRole or Organization or CareTeam or HealthcareService or Patient or Device or RelatedPerson or http://nictiz.nl/fhir/StructureDefinition/nl-core-CareTeam or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson)
   * ^short = "Owner"
   * ^definition = "The party currently responsible for executing the task."
-  * ^alias = "Uitvoerder"
+  * ^alias = "Eigenaar"
   * ^comment = """
     In Provider Tasks, the owner is typically the performer of the task (usually the patient), but execution may also be delegated to another responsible party such as a caregiver/contact person or a care team.
 
@@ -74,8 +93,9 @@ Description: "Patient-specific task that tells a patient what to do as part of a
 Mapping: ProviderTasksTaskMedMij-100-alpha1
 Source: PtTask
 Id: pt-dataset-100-alpha1-20260511
-Title: "Dataset Aanbiedertaken MedMij 1.0.0-alpha.1 20260511"
+Title: "Dataset Aanbiedertaken MedMij 1.0.0-alpha.2 20260511"
 * -> "pt-dataelement-1" "Task"
+* identifier -> "pt-dataelement-33" "Identifier"
 * extension[$pt-digital-activity] -> "pt-dataelement-2" "DigitalActivity"
 * basedOn -> "pt-dataelement-3" "GroupPlan"
 * focus -> "pt-dataelement-19" "ExecutionOrder"
@@ -83,5 +103,7 @@ Title: "Dataset Aanbiedertaken MedMij 1.0.0-alpha.1 20260511"
 * priority -> "pt-dataelement-5" "Priority"
 * description -> "pt-dataelement-6" "Description"
 * executionPeriod -> "pt-dataelement-7" "ExecutionPeriod"
+* authoredOn -> "pt-dataelement-34" "AuthoredOn"
+* lastModified -> "pt-dataelement-35" "LastModified"
 * requester -> "pt-dataelement-8" "Requester"
 * owner -> "pt-dataelement-24" "Owner"

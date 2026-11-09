@@ -2,18 +2,23 @@ Profile: PtDigitalActivity
 Parent: ActivityDefinition
 Id: pt-DigitalActivity
 Title: "pt DigitalActivity"
-Description: "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity when applicable."
+Description: "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity."
 * ^status = #draft
 * insert PublisherAndContact
-* ^purpose = "This ActivityDefinition resource represents the DigitalActivity building block for patient use cases in the context of the information standard Provider Tasks (Aanbiedertaken)."
+* ^purpose = "This ActivityDefinition resource represents the DigitalActivity building block for patient use cases in the context of the data service Provider Tasks (Aanbiedertaken)."
 * insert Copyright
 * .
   * ^short = "Digital Activity"
-  * ^definition = "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity when applicable."
+  * ^definition = "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity."
   * ^alias = "Digitale Activiteit"
-* extension contains ExtEndpointReference named endpoint 1..*
+* extension contains ExtDigitalActivityEndpoint named endpoint 1..*
 * extension[endpoint] ^short = "Endpoint for launching the activity"
   * ^definition = "Mandatory reference to the service application (endpoint) that provides the launchable digital activity. Can be more than one endpoint."
+  * ^comment = "ActivityDefinition has no core element to reference an Endpoint, so an extension is used. The slice is modelled after the endpoint extension on the Koppeltaal KT2ActivityDefinition profile (http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension), including its 1..* cardinality: a digital activity is only usable when it can be launched, so at least one endpoint is always present. Provider Tasks defines its own extension rather than reusing the Koppeltaal one because the referenced Endpoint is constrained to pt-Endpoint."
+* identifier
+  * ^short = "Identifier"
+  * ^definition = "Business identifier for this digital activity definition."
+  * ^alias = "Identificatie"
 * url 1..
 * title 1..
   * ^short = "Title"
@@ -45,10 +50,13 @@ Description: "Reusable definition of a digital activity (module) that can be sel
 Mapping: ProviderTasksDigitalActivityMedMij-100-alpha1
 Source: PtDigitalActivity
 Id: pt-dataset-100-alpha1-20260511
-Title: "Dataset Aanbiedertaken MedMij 1.0.0-alpha.1 20260511"
+Title: "Dataset Aanbiedertaken MedMij 1.0.0-alpha.2 20260511"
 * -> "pt-dataelement-9" "DigitalActivity"
+* identifier -> "pt-dataelement-31" "Identifier"
 * title -> "pt-dataelement-10" "Title"
 * status -> "pt-dataelement-11" "Status"
 * publisher -> "pt-dataelement-12" "Publisher"
 * description -> "pt-dataelement-13" "Description"
 * timingTiming -> "pt-dataelement-14" "Schedule"
+* usage -> "pt-dataelement-30" "Usage"
+* extension[$pt-endpoint] -> "pt-dataelement-36" "Endpoint"
