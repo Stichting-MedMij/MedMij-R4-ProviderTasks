@@ -40,7 +40,7 @@
   "status": "completed",
   "intent": "order",
   "priority": "routine",
-  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.",
+  "description": "Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed]",
   "focus": {
     "reference": "ServiceRequest/ProviderTasks-ServiceRequest-Execution-Glucosemeting-Van-Duinen"
   },
@@ -49,7 +49,7 @@
     "display": "Tom van Duinen"
   },
   "executionPeriod": {
-    "start": "2025-12-22T08:00:00+01:00",
+    "start": "2025-12-22T18:00:00+01:00",
     "end": "2025-12-22T23:59:00+01:00"
   },
   "authoredOn": "2025-12-19T11:20:00+01:00",

@@ -22,9 +22,9 @@
 </div>
 <!-- AUTO-TOC:END -->
 
-This scenario describes the digital care module *Digitale zorgmodule Diabetes* that *Huisartsenpraktijk de Haard* assigns to patient *Tom van Duinen*. The module consists of four reusable digital activities (two information items, one questionnaire and home blood-glucose measurements) which together result in 17 patient-facing tasks. The patient performs the activities via an external module (HinqZNO), launched from the PGO.
+This scenario describes the digital care module *Digitale zorgmodule Diabetes* that *Huisartsenpraktijk de Haard* assigns to patient *Tom van Duinen*. The module consists of four reusable digital activities (two information items, one questionnaire and home blood-glucose measurements) which together result in 20 patient-facing tasks. The patient performs the activities via an external module (HinqZNO), launched from the PGO.
 
-This scenario covers the full range of task statuses (completed, cancelled, received, requested) so that PGO behaviour for both open and finished tasks can be tested.
+This scenario covers all twelve Task statuses, so that PGO behaviour for open, finished and stopped tasks (including grouping and sorting within each group) can be tested in isolation. The description of each measurement task ends with its intended status between square brackets. This patient is used for the reference (look-up) test script, so several PGO suppliers can test the same scenario at the same time. If a tester changes a task's status anyway, the difference between `Task.status` and the status in the description shows it. Test scripts that change task statuses use a separate patient.
 
 ## Patient data {#patient-data}
 
@@ -127,16 +127,19 @@ The endpoint is used to launch the external module (HinqZNO) for executing the d
 
 ## Task data {#task-data}
 
-The Diabetes module results in **17 patient-facing tasks**, all assigned to *Tom van Duinen* and grouped under the digital group plan *Digitale zorgmodule Diabetes*. All tasks have requester *A. de Haard, Huisarts*.
+The Diabetes module results in **20 patient-facing tasks**, all assigned to *Tom van Duinen* and grouped under the digital group plan *Digitale zorgmodule Diabetes*. All tasks have requester *A. de Haard, Huisarts*.
 
 ### Information tasks {#information-tasks}
 
-Two information tasks. The patient is not required to launch the module on a specific date; the entire execution period (22-12-2025 t/m 28-12-2025) is available.
+Three information tasks. The patient is not required to launch the module on a specific date; the entire execution period (22-12-2025 t/m 28-12-2025) is available.
 
 | Digital activity | Description | Status | Execution period | Execution order | BasedOn | Requester |
 | --- | --- | --- | --- | --- | --- | --- |
 | Wat is diabetes type 2? | Lees wat diabetes type 2 is en wat je zelf kunt doen | received | 22-12-2025 t/m 28-12-2025 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Gezonder gaan leven | Lees tips voor een gezonder leven: voeding, bewegen en volhouden | requested | 22-12-2025 t/m 28-12-2025 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Gezonder gaan leven | Lees tips voor een gezonder leven: voeding, bewegen en volhouden [1] | requested | 22-12-2025 t/m 28-12-2025 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Gezonder gaan leven | Lees tips voor een gezonder leven: voeding, bewegen en volhouden [2] | requested | 22-12-2025 t/m 28-12-2025 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+
+> Note: both *Gezonder gaan leven* tasks carry the same business identifier (`TASK-Informatie-Gezonderleven-6789`) and differ only in their resource id and description. They are used to verify that PGOs show a single record per business identifier.
 
 ### Questionnaire task {#questionnaire-task}
 
@@ -148,25 +151,28 @@ One questionnaire task on the patient's living situation. The task is open (stat
 
 ### Measurement tasks (Bloedglucosemeting) {#measurement-tasks-bloedglucosemeting}
 
-Fourteen blood-glucose measurement tasks, 2 per day during 7 consecutive days (22-12-2025 t/m 28-12-2025).
+Sixteen blood-glucose measurement tasks, 2 per day during 8 consecutive days (22-12-2025 t/m 29-12-2025).
 
 | Digital activity | Description | Status | Execution period | Execution order | BasedOn | Requester |
 | --- | --- | --- | --- | --- | --- | --- |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | completed | 22-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | completed | 22-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | completed | 23-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | cancelled | 23-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 24-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 24-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 25-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 25-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 26-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 26-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 27-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 27-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 28-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
-| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. | received | 28-12-2025 18:00–23:59 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] | completed | 22-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] | completed | 22-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [completed] | completed | 23-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [cancelled] | cancelled | 23-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [failed] | failed | 24-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [rejected] | rejected | 24-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [requested] | requested | 25-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [received] | received | 25-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [ready] | ready | 26-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] | in-progress | 26-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] | in-progress | 27-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [in-progress] | in-progress | 27-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [accepted] | accepted | 28-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [on-hold] | on-hold | 28-12-2025 18:00–23:59 | – | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [draft] | draft | 29-12-2025 08:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
+| Bloedglucose meting volgens NHG protocol | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel. [entered-in-error] | entered-in-error | 29-12-2025 18:00–23:59 | Meet 7 dagen, 2 keer per dag, uw bloedglucose: nuchter vóór het ontbijt en vóór het avondeten. | Digitale zorgmodule Diabetes | A. de Haard, Huisarts |
 
 > Notes:
-> - Tasks 1–3 illustrate completed tasks, task 4 illustrates a cancelled task, and tasks 5–14 illustrate still-open (received) tasks. PGOs must be able to render the full mix in a single overview.
+> - Together the measurement tasks cover all twelve Task statuses. Tasks 1–3 are completed (three tasks, so sorting within that group can be tested), tasks 4–6 are stopped (cancelled, failed, rejected), tasks 7–14 are open (requested, received, ready, in-progress ×3, accepted, on-hold), task 15 is a draft and task 16 is entered-in-error. PGOs must be able to render the full mix in a single overview.
+> - Tasks 15 and 16 are scheduled on 29-12-2025, one day after the period of the execution order. They only exist to cover the statuses *draft* and *entered-in-error*.
 > - Task 14 (28-12-2025, 2nd measurement) has no link to the execution order (empty *Execution order* / `task.focus`), to verify that PGOs degrade gracefully when an individual task is missing its execution order reference. All other measurement tasks reference the execution order.
