@@ -25,6 +25,7 @@
 | FHIR artifacts | The `Koppeltaalv2.00` dependency has been updated to version 0.16.2 (package name casing corrected). The `nl-core` and `zib2020` dependencies have been updated to 0.12.0-beta.4. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
 | Test material | The structure and wording of the functional test material have been updated. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
 
+| Test material | 2 Additional resources added for Tom van Duinen with invalid values for meta.tag.system and meta.tag.value | [TOOLBOX1-977](https://medmij.atlassian.net/jira/browse/TOOLBOX1-977) |
 ## 1.0.0-alpha.1
 
 Initial version, intended for a Proof of Concept (PoC).
