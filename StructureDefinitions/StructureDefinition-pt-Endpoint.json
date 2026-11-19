@@ -64,14 +64,6 @@
         "definition": "The operational status of the endpoint (e.g., active, suspended, error, off, entered-in-error)."
       },
       {
-        "id": "Endpoint.connectionType",
-        "path": "Endpoint.connectionType",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://vzvz.nl/fhir/ValueSet/endpoint-connection-type"
-        }
-      },
-      {
         "id": "Endpoint.managingOrganization",
         "path": "Endpoint.managingOrganization",
         "type": [
