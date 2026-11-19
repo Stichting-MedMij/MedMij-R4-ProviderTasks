@@ -10,6 +10,5 @@ Description: "Technical FHIR REST endpoint of a source system (XIS), used by a T
 * status 1..1
   * ^short = "Status"
   * ^definition = "The operational status of the endpoint (e.g., active, suspended, error, off, entered-in-error)."
-* connectionType from $koppeltaal-endpoint-connection-type-vs (extensible)
 * managingOrganization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
  

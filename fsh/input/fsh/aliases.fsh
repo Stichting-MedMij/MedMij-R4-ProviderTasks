@@ -8,9 +8,3 @@ Alias: $client-id = http://medmij.nl/fhir/StructureDefinition/ext-Endpoint.Clien
 Alias: $pt-digital-activity = http://medmij.nl/fhir/StructureDefinition/ext-Task.DigitalActivity
 Alias: $pt-endpoint = http://medmij.nl/fhir/StructureDefinition/ext-DigitalActivity.Endpoint
 Alias: $DataServiceCodeSystemURL = http://medmij.nl/fhir/CodeSystem/DataService
-
-
-// Koppeltaal specific
-Alias: $koppeltaal-endpoint-connection-type = http://vzvz.nl/fhir/CodeSystem/koppeltaal-endpoint-connection-type
-Alias: $koppeltaal-endpoint-connection-type-vs = http://vzvz.nl/fhir/ValueSet/endpoint-connection-type
-Alias: $koppeltaal-task-code-vs = http://vzvz.nl/fhir/ValueSet/koppeltaal-task-code
