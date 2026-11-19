@@ -26,6 +26,7 @@
 | Test material | The structure and wording of the functional test material have been updated. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
 | | All references to Koppeltaal have been removed, including package dependencies, terminology bindings, aliases and profile comments. | [TOOLBOX1-1114](https://medmij.atlassian.net/browse/TOOLBOX1-11114) |
 
+| Test material | 2 Additional resources added for Tom van Duinen with invalid values for meta.tag.system and meta.tag.value | [TOOLBOX1-977](https://medmij.atlassian.net/jira/browse/TOOLBOX1-977) |
 ## 1.0.0-alpha.1
 
 Initial version, intended for a Proof of Concept (PoC).
