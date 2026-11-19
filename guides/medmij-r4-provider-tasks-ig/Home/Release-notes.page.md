@@ -24,6 +24,7 @@
 | FHIR artifacts | For each Logical Model and FHIR profile, mappings have been added in the IG. For each FHIR profile, (links to) the corresponding examples have been added in the IG. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
 | FHIR artifacts | The `Koppeltaalv2.00` dependency has been updated to version 0.16.2 (package name casing corrected). The `nl-core` and `zib2020` dependencies have been updated to 0.12.0-beta.4. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
 | Test material | The structure and wording of the functional test material have been updated. | [TOOLBOX1-896](https://medmij.atlassian.net/browse/TOOLBOX1-896) |
+| Functional Design| The references to Koppeltaal have been removed. There is no longer any dependency on Koppeltaal | [TOOLBOX1-1114](https://medmij.atlassian.net/jira/browse/TOOLBOX1-1114) |
 
 ## 1.0.0-alpha.1
 
