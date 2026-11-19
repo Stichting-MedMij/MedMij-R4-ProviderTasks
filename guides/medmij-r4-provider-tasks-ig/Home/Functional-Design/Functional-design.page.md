@@ -154,6 +154,13 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 **Tabel 2: Systeemrollen**
 
+Onderstaand contextdiagram laat zien welke systemen bij Aanbiedertaken betrokken zijn, hoe de informatiestromen tussen die systemen lopen en welk deel van de uitwisseling binnen de MedMij-standaard valt. De patiënt raadpleegt zijn taken in de PGO en start van daaruit de digitale activiteit in het modulesysteem; het modulesysteem haalt de taakgegevens op bij het XIS van de zorgaanbieder en koppelt de status daar weer naar terug.
+
+{{page:ProviderTasksContext}}
+
+**Figuur 1: Contextdiagram Aanbiedertaken**
+
+
 #### Transacties en transactiegroepen {#transacties-en-transactiegroepen}
 
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een transactiegroep. Voor de technische specificaties, zie het {{pagelink: TO, text: technisch ontwerp}}.
