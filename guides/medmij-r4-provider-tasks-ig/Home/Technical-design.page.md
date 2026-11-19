@@ -77,7 +77,7 @@ The functional model of Provider Tasks is represented by {{pagelink: LogicalMode
 
 ### Resource relationships {#resource-relationships}
 
-A `pt-Task` is one unit of work for one patient. Multiple Tasks may reference the same `pt-DigitalGroupPlan` and the same `pt-DigitalActivity`. There is no parent–child hierarchy between tasks. A task ties the other resources together through references:
+A `pt-Task` is one unit of work for one patient. Tasks belonging to the same digital care module for a patient SHOULD reference the same `pt-DigitalGroupPlan`. Tasks for the same digital activity SHOULD reference the same `pt-DigitalActivity`. There is no parent–child hierarchy between tasks. A task ties the other resources together through references:
 
 {{page:FhirProfileOverview}}
 
