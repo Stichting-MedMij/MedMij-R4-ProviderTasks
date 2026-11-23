@@ -89,7 +89,7 @@ Het doel is dat patiënten in de PGO taken zien die de zorgaanbieder heeft aange
 
 #### Patiëntreis {#pati-ntreis}
 
-Koos (54) heeft diabetes type 2. Zijn huisarts wil dat hij thuis zijn bloeddruk meet: 2× per dag gedurende 7 dagen.
+Koos (54) heeft diabetes type 2. Zijn huisarts wil dat hij thuis zijn bloeddruk meet: 2× per dag gedurende 7 dagen. Koos ontvangt een e-mail dat er een nieuwe taak klaarstaat in zijn PGO.
 
 Koos opent de PGO en raadpleegt de takenlijst. Onder het groepslabel 'Diabetes' ziet hij de taak 'Meet je bloeddruk' met de taakomschrijving, de status en het tijdschema voor uitvoering. Hij start de activiteit en de externe applicatie opent met de juiste context en Koos voert de metingen uit.
 
@@ -110,6 +110,7 @@ De uitgangspunten voor het tonen en uitvoeren van een taak zijn:
 - Het XIS maakt per digitale activiteit één taak aan en stelt deze beschikbaar aan de patiënt. Wanneer meerdere digitale activiteiten in samenhang worden aangevraagd (bijv. binnen één digitale zorgmodule), worden de bijbehorende taken gegroepeerd via een gedeeld digitaal groepsplan. Per taak worden vastgelegd:
   - een koppeling naar de digitale activiteit waarop de taak is gebaseerd;
   - patiëntspecifieke uitvoeringsinstructies en/of het tijdschema voor de uitvoering, vastgelegd in een uitvoeringsopdracht die aan de taak is gekoppeld. Een uitvoeringsopdracht is optioneel, maar verplicht wanneer er een (herhalend) tijdschema geldt (bijv. '2× per dag gedurende 7 dagen').
+- De patiënt wordt geïnformeerd (bijv. per e-mail) dat er een nieuwe taak klaarstaat in de PGO.
 - De patiënt raadpleegt de takenlijst in de PGO. De patiënt kan taken filteren (bijv. per zorgmodule).
 - De patiënt start de digitale activiteit vanuit de PGO (launch naar het modulesysteem) en voert de taak uit in de externe applicatie.
 - Het modulesysteem werkt de status van de individuele taak bij in het XIS (bijv. naar 'in uitvoering' of 'afgerond'). De patiënt kan op elk moment de takenlijst opnieuw ophalen.
