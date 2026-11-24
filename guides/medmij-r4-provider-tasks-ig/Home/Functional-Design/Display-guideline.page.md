@@ -6,7 +6,6 @@ Dit is de weergaverichtlijn voor de gegevensdienst Aanbiedertaken.
 
 De richtlijn bevat verplichte acceptatiecriteria. De mockups zijn bedoeld ter inspiratie. Een persoonlijke gezondheidsomgeving (PGO) mag de schermen naar eigen inzicht vormgeven, zolang ze gebruiksvriendelijk zijn en aan de acceptatiecriteria voldoen.
 
-In de gegevensdienst Aanbiedertaken is de PGO-gebruiker altijd de uitvoerder van een taak. Alleen de uitvoerder kan een taak op pauze zetten. De indeling van statussen in taakstatusgroepen gaat van dit uitgangspunt uit.
 
 ## 1.2.2 Doel
 
@@ -26,7 +25,7 @@ Zorgverleners kunnen de richtlijn gebruiken bij het schrijven van titels, omschr
 
 De richtlijn gaat over de gegevens van aanbiedertaken die de PGO toont. Gegevens die de PGO via andere MedMij-gegevensdiensten verzamelt, vallen erbuiten.
 
-De richtlijn gaat over taken die de PGO-gebruiker zelf uitvoert. Het profiel staat ook andere uitvoerders toe, zoals een zorgverlener, contactpersoon of zorgteam (open-world modelling). Hoe de PGO zulke taken toont, valt buiten deze richtlijn.
+De richtlijn gaat alleen over taken die de PGO-gebruiker zelf uitvoert. Het profiel staat ook andere uitvoerders toe, zoals een zorgverlener, contactpersoon of zorgteam. Hoe de PGO zulke taken toont, valt buiten deze richtlijn.
 
 Ook buiten de scope vallen:
 
@@ -67,7 +66,7 @@ Deze criteria gelden voor het takenoverzicht, de taakdetails en het gedrag van d
 | A7  | Levert het verzamelen van taken bij een zorgaanbieder een HTTP-statuscode buiten de 2xx-reeks, dan toont de PGO een melding dat het verzamelen bij die zorgaanbieder niet is gelukt.                                                                                                                                                               |
 | A8  | Levert het verzamelen van taken bij een zorgaanbieder een HTTP-statuscode in de 2xx-reeks met een lege bundle, dan toont de PGO een melding dat er bij die zorgaanbieder geen nieuwe of gewijzigde taken zijn. Bijvoorbeeld: "Er zijn geen nieuwe of gewijzigde taken bij Huisartsenpraktijk De Haard." Eerder verzamelde taken blijven zichtbaar. |
 | A9  | De PGO kiest zelf de tekst van de meldingen in O2, A7 en A8, in woorden van gelijke strekking.                                                                                                                                                                                                                                                     |
-| A10 | De gebruiker kan een taak in Te doen of Afgerond starten in de aanbiedermodule, vanuit het takenoverzicht en vanuit de taakdetails. Zie Taak starten (1.2.4.1.2).                                                                                                                                                                                  |
+| A10 | De gebruiker kan een taak in de taakstatusgroepen Te doen en Afgerond starten in de aanbiedermodule, vanuit het takenoverzicht en vanuit de taakdetails. Zie Taak starten (1.2.4.1.2).                                                                                                                                                                                  |
 
 Voor een aantal termen worden nog patiëntvriendelijke termen vastgesteld. Zodra die beschikbaar zijn, vervangen ze de huidige termen in de Tabel met specificaties. (Dit was detailcriterium 1 in alpha.2.)
 
@@ -168,7 +167,7 @@ De gebruiker ziet de taakdetails na het openen of uitklappen van een taak in het
 | D1  | De taakdetails tonen de datavelden met code a en b uit de Tabel met specificaties, volgens hun prioriteit: velden met prioriteit M altijd, met S bij voorkeur, en met C als de PGO daarvoor kiest. | M          |
 | D2  | Bevat de taak een patiëntinstructie, dan toont de PGO die in de taakdetails.                                                                                                                       | M          |
 
-De patiëntinstructie is een instructie voor deze ene gebruiker. De zorgverlener kan die invoeren bij het klaarzetten van de digitale activiteit. Algemene instructies staan in de aanbiedermodule zelf en vallen buiten deze richtlijn.
+De patiëntinstructie is een instructie voor deze ene gebruiker. De zorgverlener kan die invoeren bij het klaarzetten van de digitale activiteit. Niet patientspecifieke instructie hoe de aanbiedermodule te gebruiken staan in de aanbiedermodule zelf en vallen buiten deze richtlijn.
 
 ### 1.2.4.5 Voorbeeld
 
@@ -216,7 +215,7 @@ De tabellen tonen per dataveld van de gegevensdienst Aanbiedertaken waar de PGO 
 | C(ould have)  | Gewenste functionaliteit die waarde toevoegt, maar minder kritisch is en indien nodig kan worden uitgesteld.                                                                                                                                                                                                                                                                                                                                                                         |
 | W(on't have)  | Functionaliteiten die nu buiten scope zijn maar mogelijk in de toekomst worden overwogen. PGO's hebben de vrijheid om deze datavelden desondanks toch te tonen. Het uitgangspunt is echter dat deze velden niet primair worden weergegeven, zodat de gebruiker deze informatie niet direct ziet. De gegevens zijn alleen beschikbaar wanneer de gebruiker hier expliciet naar zoekt of doorklikt, aangezien deze datavelden geen duidelijke meerwaarde hebben voor directe weergave. |
 
-De kolom Waar tonen geeft aan waar de gebruiker het veld ziet.
+In de kolom "Waar tonen" is gespecificeerd of het item in het taakoverzicht of in de details moet worden getoond.
 
 | Code | Betekenis                                                    |
 |------|--------------------------------------------------------------|
@@ -224,15 +223,8 @@ De kolom Waar tonen geeft aan waar de gebruiker het veld ziet.
 | b    | Alleen in de taakdetails                                     |
 | c    | Niet tonen                                                   |
 
-De gegevensdienst bestaat uit vier samenhangende Logical Models:
 
-- **Taak (Task):** de taak zelf, met status, periode, aanvrager en zorgorganisatie.
 
-- **Digitale activiteit (ActivityDefinition):** de herbruikbare beschrijving van de activiteit waar de taak naar verwijst. Levert de titel die het takenoverzicht toont.
-
-- **Uitvoeringsopdracht (ServiceRequest):** alleen aanwezig als de taak een patiëntinstructie of herhaalschema heeft (via Task.focus).
-
-- **Digitaal groepsplan (DigitalGroupPlan):** bundelt verwante taken binnen dezelfde digitale zorgmodule en levert het label waarmee de groep wordt getoond.
 
 ### 1.2.5.1 Taak (Task)
 
@@ -243,7 +235,7 @@ Zie Logical Model Task.
 | Taak                                     | Rootconcept | pt-dataelement-1  |                                                                                |            |                                                                                                                                                                                                              | Taak                     |                                                                                         |            |
 | DigitalActivity                          | Reference   | pt-dataelement-2  | Bloedglucose meting volgens NHG protocol                                       | a          | Verwijzing naar de digitale activiteit. Toon de titel uit Title (pt-dataelement-10).                                                                                                                         | Titel                    |                                                                                         | M          |
 | GroupPlan::DigitalGroupPlan              | Reference   | pt-dataelement-3  | Digitale zorgmodule Diabetes                                                   | a          | Toon de display-waarde van Task.basedOn. Die bevat de waarde van code.text uit het ServiceRequest waarnaar de taak verwijst. Zie 1.2.5.4.                                                                    | Digitale zorgmodule      |                                                                                         | M          |
-| Status                                   | Item        | pt-dataelement-4  | received                                                                       | b          | In het takenoverzicht toont de PGO de status niet als tekst. Wel kan de PGO zichtbaar maken dat de gebruiker een taak al heeft opgepakt (O8).                                                                | Status                   | Gebruiksvriendelijke term volgens de tabel Taakstatussen en taakstatusgroepen (1.2.4.2) | M          |
+| Status                                   | Item        | pt-dataelement-4  | received                                                                       | b          | Optioneel kan de PGO zichtbaar maken dat de gebruiker een taak al heeft opgepakt (O8).                                                                | Status                   | Gebruiksvriendelijke term volgens de tabel Taakstatussen en taakstatusgroepen (1.2.4.2) | M          |
 | Priority                                 | Item        | pt-dataelement-5  | routine                                                                        | c          |                                                                                                                                                                                                              |                          |                                                                                         | W          |
 | Description                              | Item        | pt-dataelement-6  | Deze meting helpt om inzicht te krijgen in de bloedsuikerspiegel.              | a          |                                                                                                                                                                                                              | Omschrijving             |                                                                                         | M          |
 | ExecutionPeriod                          | Item        | pt-dataelement-7  | 2025-12-26T07:00:00+00:00 t/m 2025-12-26T22:59:00+00:00                        | a          | Periode waarin de gebruiker de taak moet of mag uitvoeren (begin en einde). De einddatum kan leeg zijn; zie O9.                                                                                              | Periode                  |                                                                                         | M          |
