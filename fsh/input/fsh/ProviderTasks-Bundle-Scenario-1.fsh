@@ -655,7 +655,7 @@ Usage: #example
 Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie-1-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
-* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.8
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
 * insert DefaultNarrativeInstance
 * extension
   * url = $pt-digital-activity
@@ -682,7 +682,7 @@ Usage: #example
 Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie-2-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
-* meta.tag[dataService] = "http://medmij.nl/fhir/CodeSystem/DataServices"#urn:oid:2.16.528.1.1023.5.7
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
 * insert DefaultNarrativeInstance
 * extension
   * url = $pt-digital-activity
