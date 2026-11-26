@@ -229,8 +229,6 @@ Characteristics: #can-be-target
 * ConnectionType 1..1 Coding "Protocol/profile used to communicate with the endpoint."
   * ^short = "Connection type"
   * ^alias = "Verbindingstype"
-  * ^binding.strength = #extensible
-  * ^binding.valueSet = "http://vzvz.nl/fhir/ValueSet/endpoint-connection-type"
 * ManagingOrganization 0..1 Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization) "Organization that manages this endpoint (and not necessarily the technical infrastructure hosting it)."
   * ^short = "Managing organization"
   * ^alias = "BeherendeOrganisatie"
