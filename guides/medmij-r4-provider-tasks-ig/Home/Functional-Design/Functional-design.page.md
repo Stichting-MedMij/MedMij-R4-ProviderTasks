@@ -30,8 +30,6 @@ topic: FO
 
 Dit functioneel ontwerp beschrijft de informatiestandaard Aanbiedertaken en legt uit hoe een zorgaanbieder patiëntspecifieke digitale activiteiten als taken beschikbaar stelt aan een patiënt via een Persoonlijke Gezondheidsomgeving (PGO). De patiënt raadpleegt de taken in de PGO en start de bijbehorende digitale activiteit in een extern modulesysteem. In dit ontwerp gebruiken we de term 'patiënt' om de persoon aan te duiden, maar hier kan ook 'cliënt' of 'burger' gelezen worden.
 
-Aanbiedertaken valt binnen het MedMij-domein. Koppeltaal richt zich op gegevensuitwisseling tussen zorginformatiesystemen onderling (EPD's, behandel-/patiëntportalen, eHealth-modules) in de context van een behandeling. Beide projecten wisselen taken en digitale activiteiten uit; Aanbiedertaken doet dat tussen zorgaanbieder en patiënt, Koppeltaal tussen zorginformatiesystemen. Deze Implementation Guide is specifiek voor Aanbiedertaken. Voor Koppeltaal is een aparte Implementation Guide beschikbaar via [Simplifier](https://simplifier.net/packages/Koppeltaalv2.00/0.16.2).
-
 Merk op dat naast dit ontwerp ook de (functionele) eisen en richtlijnen beschreven in de [MedMij R4 Core IG](https://simplifier.net/guide/medmij-r4-core-ig?version=1.0.1) en het door Nictiz gepubliceerde [Functioneel ontwerp](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp) van toepassing zijn.
 
 ### Doelgroep {#doelgroep}
@@ -93,7 +91,7 @@ Het doel is dat patiënten in de PGO taken zien die de zorgaanbieder heeft aange
 
 Koos (54) heeft diabetes type 2. Zijn huisarts wil dat hij thuis zijn bloeddruk meet: 2× per dag gedurende 7 dagen. Koos ontvangt een e-mail dat er een nieuwe taak klaarstaat in zijn PGO.
 
-Hij opent de PGO en raadpleegt de takenlijst. Onder het groepslabel 'Diabetes' ziet hij de taak 'Meet je bloeddruk' met de taakomschrijving, de status en het tijdschema voor uitvoering. Hij start de activiteit en de externe applicatie opent met de juiste context en Koos voert de metingen uit.
+Koos opent de PGO en raadpleegt de takenlijst. Onder het groepslabel 'Diabetes' ziet hij de taak 'Meet je bloeddruk' met de taakomschrijving, de status en het tijdschema voor uitvoering. Hij start de activiteit en de externe applicatie opent met de juiste context en Koos voert de metingen uit.
 
 Koos slaat de metingen op en keert terug naar de PGO. In de takenlijst ziet Koos dat de taak op 'in uitvoering' of 'afgerond' staat.
 
@@ -153,6 +151,13 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 | Modulesysteem | DigitaleActiviteitUitvoerder | PA-DAU-1.0.0-alpha.2 | Levert de digitale activiteit, ondersteunt de uitvoering en koppelt de taakstatus terug naar het XIS |
 
 **Tabel 2: Systeemrollen**
+
+Onderstaand contextdiagram laat zien welke systemen bij Aanbiedertaken betrokken zijn, hoe de informatiestromen tussen die systemen lopen en welk deel van de uitwisseling binnen de MedMij-standaard valt. De patiënt raadpleegt zijn taken in de PGO en start van daaruit de digitale activiteit in het modulesysteem; het modulesysteem haalt de taakgegevens op bij het XIS van de zorgaanbieder en koppelt de status daar weer naar terug.
+
+{{page:ProviderTasksContext}}
+
+**Figuur 1: Contextdiagram Aanbiedertaken**
+
 
 #### Transacties en transactiegroepen {#transacties-en-transactiegroepen}
 
