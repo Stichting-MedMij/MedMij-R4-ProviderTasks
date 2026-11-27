@@ -652,6 +652,59 @@ Usage: #example
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
+Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie-1-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+* insert DefaultNarrativeInstance
+* extension
+  * url = $pt-digital-activity
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Woonleefsituatie-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Vragenlijst-Woonsituatie-9643"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #requested
+* intent = #order
+* priority = #routine
+* description = "Beantwoord deze vragen over je woon/leefsituatie"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2026-01-22"
+  * end = "2026-01-28"
+* authoredOn = "2025-12-19T11:40:00+01:00"
+* lastModified = "2025-12-23T18:45:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
+
+Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie-2-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
+Usage: #example
+* meta.tag[dataService] = $DataServiceCodeSystemURL#urn:oid:2.16.528.1.1023.5.7
+* insert DefaultNarrativeInstance
+* extension
+  * url = $pt-digital-activity
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Woonleefsituatie-Van-Duinen)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-Vragenlijst-Woonsituatie-9644"
+* basedOn = Reference(ProviderTasks-ServiceRequest-DigitalGroup-Diabetes-Van-Duinen) "Digitale zorgmodule Diabetes"
+* status = #requested
+* intent = #order
+* priority = #routine
+* description = "Beantwoord deze vragen over je woon/leefsituatie"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2026-02-22"
+  * end = "2026-02-28"
+* authoredOn = "2025-12-19T11:40:00+01:00"
+* lastModified = "2025-12-23T18:45:00+01:00"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
+
 Instance: ProviderTasks-Endpoint-HINQ
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Endpoint
 Usage: #example

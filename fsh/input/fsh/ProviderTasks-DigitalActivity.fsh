@@ -14,7 +14,7 @@ Description: "Reusable definition of a digital activity (module) that can be sel
 * extension contains ExtDigitalActivityEndpoint named endpoint 1..*
 * extension[endpoint] ^short = "Endpoint for launching the activity"
   * ^definition = "Mandatory reference to the service application (endpoint) that provides the launchable digital activity. Can be more than one endpoint."
-  * ^comment = "ActivityDefinition has no core element to reference an Endpoint, so an extension is used. The slice is modelled after the endpoint extension on the Koppeltaal KT2ActivityDefinition profile (http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension), including its 1..* cardinality: a digital activity is only usable when it can be launched, so at least one endpoint is always present. Provider Tasks defines its own extension rather than reusing the Koppeltaal one because the referenced Endpoint is constrained to pt-Endpoint."
+  * ^comment = "ActivityDefinition has no core element to reference an Endpoint. Provider Tasks therefore defines the ext-DigitalActivity.Endpoint extension, which restricts the referenced Endpoint to the pt-Endpoint profile. The endpoint slice has cardinality 1..*: each digital activity must reference at least one endpoint at which it can be launched."
 * identifier
   * ^short = "Identifier"
   * ^definition = "Business identifier for this digital activity definition."
@@ -36,11 +36,7 @@ Description: "Reusable definition of a digital activity (module) that can be sel
   * ^definition = "Guidance on how this digital activity should be used in clinical workflows."
   * ^alias = "Omschrijving"
 * usage
-  * ^definition = "A detailed description of how the activity definition is used from a clinical perspective. In the MedMij use case, this text is intended for the healthcare professional who is selecting and assigning the activity to the patient."
-* topic from http://vzvz.nl/fhir/ValueSet/koppeltaal-definition-topic (extensible)
-  * ^short = "E.g. Self-Treatment and Self-Assessment, etc."
-  * ^definition = "Descriptive topics related to the content of the activity. The topic is used to indicate that the activity is intended or suitable for initialization by patients."
-  * ^binding.description = "High-level categorization of the definition, used for indicating special patient initialised activities"
+  * ^definition = "A detailed description of how the activity definition is used from a clinical perspective. This text is intended for the healthcare professional who is selecting and assigning the activity to the patient."
 * timing[x] only Timing
 * timingTiming
   * ^short = "Timing"
